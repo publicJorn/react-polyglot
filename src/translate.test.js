@@ -6,7 +6,7 @@ import translate from './translate'
 
 // eslint-disable-next-line
 const Consumer = ({ n, t }) => <div>{`${t('test')} ${n}`}</div>
-const Child = translate()(Consumer)
+const Child = translate(Consumer)
 
 const createRenderer = () =>
   TestRenderer.create(

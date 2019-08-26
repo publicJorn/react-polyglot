@@ -15,4 +15,4 @@ Greeter.propTypes = {
   t: PropTypes.func
 }
 
-export default translate()(Greeter)
+export default translate(Greeter)
