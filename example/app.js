@@ -1,7 +1,9 @@
 import React, { Fragment, useState } from 'react'
 import { render } from 'react-dom'
+
 import { I18n } from '../lib'
-import Greeter from './greeter'
+import Greeter from './Greeter'
+import CarRant from './CarRant'
 
 const messages = {
   en: {
@@ -25,7 +27,10 @@ const App = () => {
     <Fragment>
       <button onClick={toggleLocale}>{locale}</button>
       <I18n locale={locale} messages={messages[locale]}>
-        <Greeter name="Batsy" nrCars={3} />
+        <section>
+          <Greeter name="Batsy" />
+          <CarRant nrCars={3} />
+        </section>
       </I18n>
     </Fragment>
   )
