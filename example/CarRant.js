@@ -9,7 +9,7 @@ const CarRant = ({ nrCars }) => {
 }
 
 CarRant.propTypes = {
-  nrCars: PropTypes.string.isRequired,
+  nrCars: PropTypes.number.isRequired,
   t: PropTypes.func,
 }
 
