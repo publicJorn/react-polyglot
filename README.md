@@ -142,12 +142,15 @@ Tests and Contributing guides are in progress.
 
 ## Release History
 
-- 0.1.0 Initial Release
-- 0.2.0 Update the I18n component when the locale changes
-- 0.2.1 Add 'files' to keep in the package
-- 0.2.2 Add babel-cli for the commonjs build
-- 0.2.3 Add prop-types and start using that instead of React.PropTypes [PR#6](https://github.com/nayaabkhan/react-polyglot/pull/6)
-- 0.2.4 Add a section on 'How to provide context in tests' [PR#10](https://github.com/nayaabkhan/react-polyglot/pull/10)
-- 0.2.5 Prevent creation of multiple instances on receiving new props [PR#9](https://github.com/nayaabkhan/react-polyglot/pull/9)
-- 0.2.6 Add React v16 as a peer dependency [PR#12](https://github.com/nayaabkhan/react-polyglot/pull/12)
+- 0.6.2 (publicJorn) Updated release notes.
+- 0.6.1 (publicJorn) Fixed prop-type warning in example.
+- 0.6.0 (publicJorn) Added `useTranslate` (by @soda0289) and tests (by publicJorn).
 - 0.5.0 (publicJorn) Removed `componentWillReceiveProps` in I18n. Change `translate` api to `translate(Component)`.
+- 0.2.6 Add React v16 as a peer dependency [PR#12](https://github.com/nayaabkhan/react-polyglot/pull/12).
+- 0.2.5 Prevent creation of multiple instances on receiving new props [PR#9](https://github.com/nayaabkhan/react-polyglot/pull/9).
+- 0.2.4 Add a section on 'How to provide context in tests' [PR#10](https://github.com/nayaabkhan/react-polyglot/pull/10).
+- 0.2.3 Add prop-types and start using that instead of React.PropTypes [PR#6](https://github.com/nayaabkhan/react-polyglot/pull/6).
+- 0.2.2 Add babel-cli for the commonjs build.
+- 0.2.1 Add 'files' to keep in the package.
+- 0.2.0 Update the I18n component when the locale changes.
+- 0.1.0 Initial Release.
