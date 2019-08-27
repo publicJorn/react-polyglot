@@ -1,6 +1,6 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-import I18n from './i18n'
+import I18n from '../i18n'
 
 describe('I18n Provider', () => {
   const Child = () => <div />

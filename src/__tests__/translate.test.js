@@ -1,8 +1,8 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 
-import I18n from './i18n'
-import translate from './translate'
+import I18n from '../i18n'
+import translate from '../translate'
 
 // eslint-disable-next-line
 const Consumer = ({ n, t }) => <div>{`${t('test')} ${n}`}</div>
