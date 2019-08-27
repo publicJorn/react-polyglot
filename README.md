@@ -6,7 +6,9 @@
 
 # React Polyglot
 
-Provides higher order component for using Polyglot with React
+Provides higher order component for using Polyglot with React.
+
+This package is a fork of [react-polyglot](https://github.com/nayaabkhan/react-polyglot).
 
 ## Installation
 
