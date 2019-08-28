@@ -26,7 +26,7 @@ const App = () => {
   return (
     <Fragment>
       <button onClick={toggleLocale}>{locale}</button>
-      <I18n locale={locale} messages={messages[locale]} devmode>
+      <I18n locale={locale} messages={messages[locale]} highlight="hotpink">
         <section>
           <Greeter name="Batsy" />
           <CarRant nrCars={3} />
