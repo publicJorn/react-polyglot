@@ -35,4 +35,29 @@ describe('I18n Provider', () => {
     const instance = renderer.getInstance()
     expect(instance._polyglot.locale()).toBe('jp')
   })
+
+  it('should translate to the expected text', () => {
+    const renderer = TestRenderer.create(
+      <I18n {...props}>
+        <Child />
+      </I18n>
+    )
+
+    const instance = renderer.getInstance()
+
+    expect(instance.translate('test')).toBe('test')
+  })
+
+  it('should wrap the translated text with a span', () => {
+    const renderer = TestRenderer.create(
+      <I18n {...props} highlight="hotpink">
+        <Child />
+      </I18n>
+    )
+
+    const instance = renderer.getInstance()
+    const translated = TestRenderer.create(instance.translate('test'))
+
+    expect(translated.toJSON().type).toBe('span')
+  })
 })

@@ -12,6 +12,17 @@ export default class I18n extends Component {
       locale: props.locale,
       phrases: props.messages,
     })
+
+    this.translate = this.translate.bind(this)
+  }
+
+  translate(...args) {
+    const { highlight } = this.props
+    const str = this._polyglot.t.call(this._polyglot, ...args)
+
+    if (!highlight) return str
+
+    return <span style={{ backgroundColor: highlight }}>{str}</span>
   }
 
   render() {
@@ -23,7 +34,7 @@ export default class I18n extends Component {
     }
 
     return (
-      <I18nContext.Provider value={this._polyglot.t.bind(this._polyglot)}>
+      <I18nContext.Provider value={this.translate}>
         {React.Children.only(children)}
       </I18nContext.Provider>
     )
@@ -32,6 +43,7 @@ export default class I18n extends Component {
 
 I18n.propTypes = {
   forceReInit: PropTypes.bool,
+  highlight: PropTypes.string,
   locale: PropTypes.string.isRequired,
   messages: PropTypes.object.isRequired,
   children: PropTypes.element.isRequired,
@@ -39,4 +51,5 @@ I18n.propTypes = {
 
 I18n.defaultProps = {
   forceReInit: false,
+  highlight: '',
 }
